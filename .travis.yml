@@ -1,0 +1,11 @@
+language: node_js
+dist: trusty
+addons:
+  sonarcloud:
+    organization: 'tsabunkar-github'
+    token:
+      secure: 'd2a27e85db3b71d0318c9673c35f3106f4c8c79b' # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
